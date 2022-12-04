@@ -9,15 +9,15 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'What is a title of your project? (Required)',
-        validate: 
-        titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('You need to enter a title of your project!');
-                return false;
+        validate:
+            titleInput => {
+                if (titleInput) {
+                    return true;
+                } else {
+                    console.log('You need to enter a title of your project!');
+                    return false;
+                }
             }
-        }
     },
     {
         type: 'input',
@@ -72,12 +72,12 @@ const questions = [
         }
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Choose a license for your project: (Required)',
-        choices: ['Apache 2.0', 'GNU GPL v3', 'Eclipse Public License 1.0', 'The MIT License', 'None'],
-        validate: licensingCheckbox => {
-            if (licensingCheckbox) {
+        choices: ["Apache 2.0", 'GNU GPL v3', 'Eclipse Public License 1.0', 'The MIT License', 'None'],
+        validate: licenseList => {
+            if (licenseList) {
                 return true;
             } else {
                 console.log('You must pick a license for the project. If there is no license, please select "None"!');
