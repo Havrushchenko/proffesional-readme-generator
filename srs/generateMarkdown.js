@@ -3,13 +3,13 @@
 function renderLicenseBadge(license) {
   let badge = "";
   if (license === "Apache 2.0") {
-    badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
   } else if (license === "GNU GPL v3") {
-    badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)";
   } else if (license === "Eclipse Public License 1.0") {
-    badge = "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)";
+    badge = "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)";
   } else if (license === "The MIT License") {
-    badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
   } else {
     badge = ""
   }
@@ -18,7 +18,21 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) { 
+  let licenseLink = "";
+  if (license === "Apache 2.0") {
+    licenseLink = "(https://opensource.org/licenses/Apache-2.0)";
+  } else if (license === "GNU GPL v3") {
+    licenseLink = "(https://www.gnu.org/licenses/gpl-3.0)";
+  } else if (license === "Eclipse Public License 1.0") {
+    licenseLink = "(https://opensource.org/licenses/EPL-1.0)";
+  } else if (license === "The MIT License") {
+    licenseLink = "(https://opensource.org/licenses/MIT)";
+  } else {
+    licenseLink = ""
+  }
+  return licenseLink;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
