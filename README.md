@@ -1,18 +1,29 @@
-# sdf
+# Proffesional Portfolio Generator
   ## Licensing:
-  [![license](https://img.shields.io/badge/license-BSD-blue)](https://shields.io)
+  [![license](https://img.shields.io/badge/license-Apache-orange)](https://shields.io)
+
+  ## Table of Contents 
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
+  - [Additional Info](#additional-info)
+
   ## Description:
-  sdf
+  This is a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package. This allows the project creator to devote more time working on the project. 
+  
   ## Installation:
-  sdf
+  The application will be invoked by using the following command: node index.js
+
   ## Usage:
-  sdf
-  ## License:
-  BSD
+  You can quickly and easily generate a README file by using a command-line application to generate one. 
+
+  ## Testing:
+  None
+  
   ## Contribution:
   undefined
-  ## Testing:
-  sdf
+
   ## Additional Info:
-  - Github: [sdf](https://github.com/sdf)
-  - Email: sdf
+  - Github: (https://github.com/Havrushchenko)
+  - Email: glitteringpuzzlemusic@gmail.com

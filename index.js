@@ -9,7 +9,8 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'What is a title of your project? (Required)',
-        validate: titleInput => {
+        validate: 
+        titleInput => {
             if (titleInput) {
                 return true;
             } else {
@@ -57,7 +58,6 @@ const questions = [
             }
         }
     },
-    // Contribution
     {
         type: 'input',
         name: 'testing',
@@ -75,12 +75,12 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Choose a license for your project: (Required)',
-        choices: ['Eclipse Public License', 'BSD', 'Affero General Public License', 'Artistic License', 'CDDL', 'Microsoft Public License', 'None'],
+        choices: ['Apache 2.0', 'GNU GPL v3', 'Eclipse Public License 1.0', 'The MIT License', 'None'],
         validate: licensingCheckbox => {
             if (licensingCheckbox) {
                 return true;
             } else {
-                console.log('You must pick a license for the project!');
+                console.log('You must pick a license for the project. If there is no license, please select "None"!');
                 return false;
             }
         }
@@ -122,7 +122,7 @@ function writeToFile(fileContent) {
                 return
             }
             resolve
-            console.log('Success! Information transferred to the README!')
+            console.log('Great job! Your information transferred to the README.md!')
         })
     })
 }
@@ -130,9 +130,9 @@ function writeToFile(fileContent) {
 // Function to initialize app
 function init() {
     inquirer.prompt(questions)
-        .then(function (answer) {
-            console.log(answer)
-            var fileContent = generateMarkdown(answer);
+        .then(function (data) {
+            console.log(data)
+            var fileContent = generateMarkdown(data);
             writeToFile(fileContent);
         });
 };
