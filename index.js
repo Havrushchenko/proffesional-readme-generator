@@ -73,7 +73,7 @@ const questions = [
     },
     {
         type: 'checkbox',
-        name: 'licensing',
+        name: 'license',
         message: 'Choose a license for your project: (Required)',
         choices: ['Eclipse Public License', 'BSD', 'Affero General Public License', 'Artistic License', 'CDDL', 'Microsoft Public License', 'None'],
         validate: licensingCheckbox => {
@@ -94,19 +94,6 @@ const questions = [
                 return true;
             } else {
                 console.log('Please enter your GitHub username!');
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'link',
-        message: 'Enter the GitHub link to your project: (Required)',
-        validate: linkInput => {
-            if (linkInput) {
-                return true;
-            } else {
-                console.log('You need to enter a project GitHub link!');
                 return false;
             }
         }
