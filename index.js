@@ -116,7 +116,7 @@ const questions = [
 // Function to generate a README.md
 function writeToFile(fileContent) {
     return new Promise((resolve, reject) => {
-        FileSystem.writeFile('./README.md', fileContent, err => {
+        FileSystem.writeFile('./dist/README.md', fileContent, err => {
             if (err) {
                 reject(err);
                 return
