@@ -121,7 +121,6 @@ function writeToFile(fileContent) {
                 reject(err);
                 return
             }
-            resolve
             console.log('Great job! Your information transferred to the README.md!')
         })
     })
